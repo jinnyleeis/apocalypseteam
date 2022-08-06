@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public enum WEAPONTYPE { ÃÑ, ¹æ¸ÁÀÌ };
+    public enum WEAPONTYPE { ì´, ë°©ë§ì´ };
     public WEAPONTYPE type;
 
     
-    public Transform weaponPosition; //¹«±â°¡ ³õÀÏ À§Ä¡ , ÇÒ´çÇØÁà¾ßÇÔ
+    public Transform weaponPosition; //ï¿½ï¿½ï¿½â°¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ , ï¿½Ò´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public PlayerAnimation playerAnimation;
     public Transform player;
 
@@ -30,12 +30,12 @@ public class Weapon : MonoBehaviour
         {
             this.transform.SetParent(weaponPosition);
             switch (type)
-                //Å¸ÀÔ¿¡ ¸Â°Ô ·ÎÅ×ÀÌ¼Ç Á¶Àı
+            
             {
-                case WEAPONTYPE.ÃÑ:
+                case WEAPONTYPE.ì´:
                     //this.transform.rotation = Quaternion.Euler();
                     break;
-                case WEAPONTYPE.¹æ¸ÁÀÌ:
+                case WEAPONTYPE.ë°©ë§ì´:
                     break;
                 default:
                     break;

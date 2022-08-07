@@ -9,46 +9,31 @@ public class Weapon : MonoBehaviour
 
     
     public Transform weaponPosition; //���Ⱑ ���� ��ġ , �Ҵ��������
-    public PlayerAnimation playerAnimation;
+    public Animator playerAnimator;
     public Transform player;
 
     public bool canAttack;
-
+    public bool isAcquired;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerAnimation = player.GetComponent<PlayerAnimation>();
+        playerAnimator = player.GetComponent<Animator>();
     }
 
     public void SetWeaponPosition()
     {
-        if(weaponPosition != null)
-        {
-            weaponPosition.DetachChildren();
-        }
-        else
-        {
-            this.transform.SetParent(weaponPosition);
-            switch (type)
-            
-            {
-                case WEAPONTYPE.총:
-                    //this.transform.rotation = Quaternion.Euler();
-                    break;
-                case WEAPONTYPE.방망이:
-                    break;
-                default:
-                    break;
-            }
-        }
+        weaponPosition.DetachChildren();
+        this.transform.SetParent(weaponPosition);
+        this.transform.localPosition = Vector3.zero;
+        this.transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
-
-    public void SetOffWeapon()
+    public virtual void SetOffWeapon()
     {
         weaponPosition.DetachChildren();
+        isAcquired = false;
     }
 
-    public IEnumerator WeaponCoolTime()
+    public virtual IEnumerator WeaponCoolTime()
     {
         yield return new WaitForSeconds(0.3f);
         canAttack = true;

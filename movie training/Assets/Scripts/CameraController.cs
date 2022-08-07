@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] float rotateSpeedX = 2.3f; //ÁÂ¿ì ½ºÇÇµå
-    [SerializeField] float rotateSpeedY = 3f; //À§¾Æ·¡ ½ºÇÇµå
+    [SerializeField] float rotateSpeedX = 1.5f; //ì¢Œìš° ìŠ¤í”¼ë“œ
+    [SerializeField] float rotateSpeedY = 3f; //ìœ„ì•„ëž˜ ìŠ¤í”¼ë“œ
     [SerializeField] float limitMinX = -80f; 
     [SerializeField] float limitMaxX = 50f;
     float eulerAngleX;
     float eulerAngleY;
 
-    [SerializeField] float randomCameraShakeValue = 0.23f; //»ç¿ëµÇÁö¾ÊÀ½
     [SerializeField] Transform player;
-    Vector3 cameraPos;
-    Vector3 cameraPosition;
     private void Awake()
     {
         if(player == null)
@@ -24,7 +21,7 @@ public class CameraController : MonoBehaviour
     }
     public void ToRatate(float mouseX, float mouseY)
     {
-        eulerAngleY += mouseX * rotateSpeedY;
+        eulerAngleY += mouseX * rotateSpeedX;
         eulerAngleX -= mouseY * rotateSpeedY;
 
         eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
@@ -42,34 +39,4 @@ public class CameraController : MonoBehaviour
 
         return Mathf.Clamp(angle, min, max);
     }
-
-    //public void Shake()
-    //{
-    //    cameraPos = transform.localPosition;
-    //    StartCoroutine(ShakeCamera());
-    //}
-    //float cameraY;
-    //bool isShaking;
-    //IEnumerator ShakeCamera()
-    //{
-    //    //float cameraX = Random.value * randomCameraShakeValue * 2 - randomCameraShakeValue;
-    //    cameraY = Random.value * randomCameraShakeValue;
-    //    cameraPosition = transform.localPosition;
-    //    //cameraPosition.x += cameraX;
-    //    //cameraPosition.y += cameraY;
-    //    isShaking = true;
-
-    //    yield return new WaitForSeconds(0.3f);
-    //    transform.localPosition = cameraPos;
-    //    isShaking = false;
-    //}
-
-    //private void Update()
-    //{
-    //    if (isShaking)
-    //    {
-    //        cameraPosition = Vector3.Lerp(cameraPosition, new Vector3(0, cameraPosition.y + cameraY, 0), 0.7f);
-    //        transform.position = cameraPosition;
-    //    }
-    //}
 }

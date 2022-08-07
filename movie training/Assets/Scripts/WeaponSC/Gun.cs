@@ -11,48 +11,60 @@ public class Gun : Weapon
     [SerializeField] Transform gunTransform;
 
     Vector3 dir;
-    
+
     public void Shot()
     {
-        dir = gunHole.position - transform.position; //ΩÓ¥¬ πÊ«‚
+        dir = gunHole.position - transform.position; //ÏèòÎäî Î∞©Ìñ•
         if (Physics.Raycast(transform.position, dir, out raycastHit, shootDistance))
         {   
             if (raycastHit.collider.CompareTag("BUG"))
             {
-                //πˆ±◊ Ω¶¿Ã¥ı On -> Ω¥∑Á∑Ë ªÁ∂Û¡ˆ∞‘≤˚ «œ∞Ì ¡◊¥¬º“∏Æ ≤–;;
+                //Î≤ÑÍ∑∏ ÏâêÏù¥Îçî On -> ÏäàÎ£®Î£© ÏÇ¨ÎùºÏßÄÍ≤åÎÅî ÌïòÍ≥† Ï£ΩÎäîÏÜåÎ¶¨ ÍΩ•;;
                 raycastHit.transform.GetComponent<DissolveController>().execute = true;
                 GameObject effect = Instantiate(hitEffect, raycastHit.transform.position, Quaternion.identity);
                 Destroy(effect, 1f);
             }
         }
+        playerAnimator.SetTrigger("isShot");
+    }
+
+    public override void SetOffWeapon()
+    {
+        base.SetOffWeapon();
     }
     void Update()
     {
         Debug.DrawRay(transform.position, dir * 30f, Color.red);
-        if (Input.GetMouseButtonDown(1))
+        if (isAcquired)
         {
-            playerAnimation.ShootingAnimation(true); //¡∂¡ÿ
-            canAttack = true;
-        }
-        else if (Input.GetMouseButtonUp(1))
-        {
-            playerAnimation.ShootingAnimation(false); //¡∂¡ÿ √Îº“
-            canAttack = false;
-        }
-
-        if (canAttack)
-        {
-
-            if (Input.GetMouseButton(0)) //πﬂªÁ
+            if (Input.GetMouseButtonDown(1))
             {
+                playerAnimator.SetBool("isShotIdleState", true);
+                transform.GetChild(0).transform.localPosition = new Vector3(0.1439f, -0.0224f, -0.1518f);
+                transform.GetChild(0).transform.localRotation = Quaternion.Euler(17.691f, -171.485f, -6.9f);
+                canAttack = true;
+            }
+            else if (Input.GetMouseButtonUp(1))
+            {
+                playerAnimator.SetBool("isShotIdleState", false); 
+                transform.GetChild(0).transform.localRotation = Quaternion.Euler(66.014f, -193.442f, -51.479f);
                 canAttack = false;
-                Shot();
-                //cameraController.Shake();
-                //√—º“∏Æµµ ≥™∏È ¡¡¿ªµÌ?
+            }
 
-                StartCoroutine(WeaponCoolTime());
+            if (canAttack)
+            {
+
+                if (Input.GetMouseButton(0)) //Î∞úÏÇ¨
+                {
+                    canAttack = false;
+                    Shot();
+                    //Ï¥ùÏÜåÎ¶¨ÎèÑ ÎÇòÎ©¥ Ï¢ãÏùÑÎìØ?
+
+                    StartCoroutine(WeaponCoolTime());
+                }
             }
         }
+        
     }
 
 }

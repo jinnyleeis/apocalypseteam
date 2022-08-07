@@ -21,7 +21,6 @@ public class PlayerAnimation : MonoBehaviour
         {
             animator.SetFloat("moveSpeed", 0f);
         }
-        
     }
 
     public void ShootingAnimation(bool isAiming)

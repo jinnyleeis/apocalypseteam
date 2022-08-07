@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour
         float dirX = Input.GetAxisRaw("Horizontal");
         float dirY = Input.GetAxisRaw("Vertical");
 
-        moveMent.ToMove(new Vector3(dirX, 0, dirY));
+        moveMent.ToMove(new Vector3(dirX, 0, dirY).normalized);
+        playerAnimation.RunAnimation(new Vector3(dirX, 0, dirY).normalized);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -30,7 +31,6 @@ public class PlayerController : MonoBehaviour
         float cameraY = Input.GetAxis("Mouse Y");
 
         cameraController.ToRatate(cameraX, cameraY);
-        playerAnimation.RunAnimation(new Vector3(dirX, 0, dirY));
     }
 
 
@@ -38,11 +38,12 @@ public class PlayerController : MonoBehaviour
   
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("GUN") || other.CompareTag("BAT"))
+        if(other.CompareTag("GUN") || other.CompareTag("BAT"))
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 other.GetComponent<Weapon>().SetWeaponPosition();
+                other.GetComponent<Weapon>().isAcquired = true;
             }
         }
     }

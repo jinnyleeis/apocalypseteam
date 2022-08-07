@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bat : Weapon
 {
-    //³ª¹«¸¦ º§ ¶§ ³ª¹«¿¡ ¹æ¸ÁÀÌ°¡ ´êÀ¸¸é Æ¨°ÜÁ® ³ª°¡¾ßÇÏ³ª ¾Æ´Ï¸é ¹ÚÇô¾ßÇÏ³ª..?
+    //ë‚˜ë¬´ë¥¼ ë²¨ ë•Œ ë‚˜ë¬´ì— ë°©ë§ì´ê°€ ë‹¿ìœ¼ë©´ íŠ•ê²¨ì ¸ ë‚˜ê°€ì•¼í•˜ë‚˜ ì•„ë‹ˆë©´ ë°•í˜€ì•¼í•˜ë‚˜..?
     void Update()
     {
         if (canAttack)
@@ -12,10 +12,15 @@ public class Bat : Weapon
             if (Input.GetMouseButtonDown(0))
             {
                 canAttack = false;
-                playerAnimation.SwingBatAnimation();
+                //playerAnimator
 
                 StartCoroutine(WeaponCoolTime());
             }
         }
+    }
+
+    public override void SetOffWeapon()
+    {
+        base.SetOffWeapon();
     }
 }

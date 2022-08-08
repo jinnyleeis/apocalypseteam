@@ -66,5 +66,9 @@ public class Gun : Weapon
         }
         
     }
-
+    IEnumerator WeaponCoolTime()
+    {
+        yield return new WaitForSeconds(0.3f);
+        canAttack = true;
+    }
 }

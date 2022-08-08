@@ -33,9 +33,5 @@ public class Weapon : MonoBehaviour
         isAcquired = false;
     }
 
-    public virtual IEnumerator WeaponCoolTime()
-    {
-        yield return new WaitForSeconds(0.3f);
-        canAttack = true;
-    }
+
 }

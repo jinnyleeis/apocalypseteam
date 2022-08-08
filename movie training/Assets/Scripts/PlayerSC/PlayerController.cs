@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
             {
                 other.GetComponent<Weapon>().SetWeaponPosition();
                 other.GetComponent<Weapon>().isAcquired = true;
+                other.GetComponent<Weapon>().canAttack = true;
             }
         }
     }

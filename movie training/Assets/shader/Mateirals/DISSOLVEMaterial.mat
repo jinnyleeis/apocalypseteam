@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DISSOLVEMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 4c76a790ccb7912488d58bcbfcb82bac,
+  m_Shader: {fileID: -6465566751694194690, guid: 1d00d0ad2cfa6d441b9fa3bc909bc4c1,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -29,7 +29,7 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:

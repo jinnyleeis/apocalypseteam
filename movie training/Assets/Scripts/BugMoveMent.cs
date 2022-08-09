@@ -6,7 +6,7 @@ public class BugMoveMent : MonoBehaviour
 {
     Vector3 rotateDir;
 
-    [SerializeField] float moveSpeed = 0.3f;
+    [SerializeField] float moveSpeed = 0.03f;
     Rigidbody rigidbody;
 
     public bool canClimbUpWall;
@@ -73,6 +73,10 @@ public class BugMoveMent : MonoBehaviour
                 rigidbody.rotation = Quaternion.Euler(-90f, 0, 0);
             }
             if (collision.collider.CompareTag("WALL4"))
+            {
+                rigidbody.rotation = Quaternion.Euler(-90f, 180f, 0);
+            }
+               if (collision.collider.CompareTag("Box106"))
             {
                 rigidbody.rotation = Quaternion.Euler(-90f, 180f, 0);
             }

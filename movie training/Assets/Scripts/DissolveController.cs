@@ -10,7 +10,6 @@ public class DissolveController : MonoBehaviour
     public bool execute;
     private void Awake()
     {
-
         material = GetComponent<Renderer>().material;
         value = material.GetFloat("_Alpha");
     }
@@ -23,6 +22,7 @@ public class DissolveController : MonoBehaviour
             {
                 value += Time.deltaTime * increase;
                 material.SetFloat("_Alpha", value);
+               
             }
         }
     }

@@ -8,18 +8,18 @@ public class Gun : Weapon
     float shootDistance = 777f;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Transform gunHole;
+    [SerializeField] Transform gunHole2;
     [SerializeField] Transform gunTransform;
 
     Vector3 dir;
 
     public void Shot()
     {
-        dir = gunHole.position - transform.position; //쏘는 방향
+        dir = gunHole.position - gunHole2.position; //쏘는 방향
         if (Physics.Raycast(transform.position, dir, out raycastHit, shootDistance))
         {   
             if (raycastHit.collider.CompareTag("BUG"))
             {
-                //버그 쉐이더 On -> 슈루룩 사라지게끔 하고 죽는소리 꽥;;
                 raycastHit.transform.GetComponent<DissolveController>().execute = true;
                 GameObject effect = Instantiate(hitEffect, raycastHit.transform.position, Quaternion.identity);
                 Destroy(effect, 1f);
@@ -34,7 +34,7 @@ public class Gun : Weapon
     }
     void Update()
     {
-        Debug.DrawRay(transform.position, dir * 30f, Color.red);
+       
         if (isAcquired)
         {
             if (Input.GetMouseButtonDown(1))

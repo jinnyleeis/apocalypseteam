@@ -21,15 +21,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DISSOLVEMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 4c76a790ccb7912488d58bcbfcb82bac,
+  m_Shader: {fileID: -6465566751694194690, guid: 1d00d0ad2cfa6d441b9fa3bc909bc4c1,
     type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -56,7 +55,7 @@ Material:
     - _Cull: 0
     - _DstBlend: 10
     - _NoisePower: 0.1
-    - _NoiseScale: 77
+    - _NoiseScale: 200
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -70,7 +69,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _BaseColor: {r: 4, g: 0, b: 0, a: 0}
-    - _Color: {r: 2.9960785, g: 0, b: 0, a: 1}
+    - _BaseColor: {r: 16, g: 0.3764706, b: 0.3764706, a: 0}
+    - _Color: {r: 4, g: 0, b: 0, a: 1}
     - _TilingScale: {r: 0.1, g: 100, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] float rotateSpeedX = 1.5f; //좌우 스피드
     [SerializeField] float rotateSpeedY = 3f; //위아래 스피드
-    [SerializeField] float limitMinX = -80f; 
+    [SerializeField] float limitMinX = -45f; 
     [SerializeField] float limitMaxX = 50f;
     float eulerAngleX;
     float eulerAngleY;
@@ -26,9 +26,9 @@ public class CameraController : MonoBehaviour
 
         eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
 
-        //transform.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
-        player.rotation = Quaternion.Euler(0, eulerAngleY, 0);
         transform.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
+        player.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
+        //transform.rotation = Quaternion.Euler(0, eulerAngleY, 0);
     }
 
     float ClampAngle(float angle, float min, float max)

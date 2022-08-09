@@ -58,6 +58,7 @@ public class BugMoveMent : MonoBehaviour
     {
         if (canClimbUpWall)
         {
+
             isClimbUpWall = true;
             rigidbody.useGravity = false;
             if (collision.collider.CompareTag("WALL1"))
@@ -83,6 +84,7 @@ public class BugMoveMent : MonoBehaviour
             canClimbUpWall = false;
             StartCoroutine(UseGravity());
         }
+       
     }
 
 

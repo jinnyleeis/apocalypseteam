@@ -12,7 +12,12 @@ public class Gun : Weapon
     [SerializeField] Transform gunTransform;
 
     Vector3 dir;
+    Vector3 originRotation;
+    private void Awake()
+    {
+        originRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
 
+    }
     public void Shot()
     {
         dir = gunHole.position - gunHole2.position; //쏘는 방향

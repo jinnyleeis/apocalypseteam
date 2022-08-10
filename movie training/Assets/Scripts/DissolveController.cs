@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class DissolveController : MonoBehaviour
 {
-    Material material;
-    float value;
+    Material[] material;
+    float value = 0;
     public float increase = 0.1f;
     public bool execute;
+    float length;
+    Renderer[] childGO;
     private void Awake()
     {
-        material = GetComponent<Renderer>().material;
-        value = material.GetFloat("_Alpha");
+        childGO = GetComponentsInChildren<Renderer>();
+        length = GetComponentsInChildren<Transform>().Length;
+        //for (int i=0; i< length -1; i++)
+        //{
+        //    material[i] = childGO[i].material;
+        //}
     }
 
     public void Update()
@@ -21,8 +27,11 @@ public class DissolveController : MonoBehaviour
             if (value <= 1f)
             {
                 value += Time.deltaTime * increase;
-                material.SetFloat("_Alpha", value);
-               
+                for (int i = 0; i < length - 1; i++)
+                {
+                    //material[i].SetFloat("_Alpha", value);
+                    childGO[i].material.SetFloat("_Alpha", value);
+                }
             }
         }
     }

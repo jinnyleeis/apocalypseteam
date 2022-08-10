@@ -77,10 +77,10 @@ public class BugMoveMent : MonoBehaviour
             {
                 rigidbody.rotation = Quaternion.Euler(-90f, 180f, 0);
             }
-               if (collision.collider.CompareTag("Box106"))
-            {
-                rigidbody.rotation = Quaternion.Euler(-90f, 180f, 0);
-            }
+            //   if (collision.collider.CompareTag("Box106"))
+            //{
+            //    rigidbody.rotation = Quaternion.Euler(-90f, 180f, 0);
+            //}
             canClimbUpWall = false;
             StartCoroutine(UseGravity());
         }

@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
     float eulerAngleY;
 
     [SerializeField] Transform player;
+    [SerializeField] float t = 0.01f;
     private void Awake()
     {
         if(player == null)
@@ -26,8 +27,10 @@ public class CameraController : MonoBehaviour
 
         eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
 
-        transform.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
-        player.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
+        //transform.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
+        player.rotation = Quaternion.Lerp(player.rotation, Quaternion.Euler(eulerAngleX, eulerAngleY, 0) , t);
+
+        
         //transform.rotation = Quaternion.Euler(0, eulerAngleY, 0);
     }
 

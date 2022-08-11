@@ -20,17 +20,17 @@ public class CameraController : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
-    public void ToRatate(float mouseX, float mouseY)
+    public void ToRatate(float mouseX, float mouseY ,bool isAiming)
     {
         eulerAngleY += mouseX * rotateSpeedX;
         eulerAngleX -= mouseY * rotateSpeedY;
 
         eulerAngleX = ClampAngle(eulerAngleX, limitMinX, limitMaxX);
 
-        //transform.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
-        player.rotation = Quaternion.Lerp(player.rotation, Quaternion.Euler(eulerAngleX, eulerAngleY, 0) , t);
+        transform.rotation = Quaternion.Euler(eulerAngleX, eulerAngleY, 0);
+        if(!isAiming) player.rotation = Quaternion.Lerp(player.rotation, Quaternion.Euler(0, eulerAngleY, 0) , t);
+        else player.rotation = Quaternion.Lerp(player.rotation, Quaternion.Euler(eulerAngleX, eulerAngleY, 0) , t);
 
-        
         //transform.rotation = Quaternion.Euler(0, eulerAngleY, 0);
     }
 

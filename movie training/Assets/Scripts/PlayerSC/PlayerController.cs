@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     MoveMent moveMent;
     [SerializeField] CameraController cameraController;
     PlayerAnimation playerAnimation;
-
+    public bool isAiming;
     private void Awake()
     {
         moveMent = GetComponent<MoveMent>();
@@ -24,13 +24,17 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            moveMent.ToJump();
+            //moveMent.ToJump();
+            playerAnimation.PushingAnimation(true);
+        }else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            playerAnimation.PushingAnimation(false);
         }
 
         float cameraX = Input.GetAxis("Mouse X");
         float cameraY = Input.GetAxis("Mouse Y");
 
-        cameraController.ToRatate(cameraX, cameraY);
+        cameraController.ToRatate(cameraX, cameraY, isAiming);
     }
 
 

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &716314605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716314606}
+  m_Layer: 0
+  m_Name: Gun Hole2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &716314606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716314605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00539, y: -0, z: 0.00379}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6389459360990006143}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2813065223863388989
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,18 +56,19 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2813065223863388989}
-  m_LocalRotation: {x: 0.3042616, y: -0.777893, z: 0.52993774, w: 0.14653775}
-  m_LocalPosition: {x: 0.143, y: 0.02, z: -0.137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 18, y: 18, z: 18}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5266459329539332819}
   - {fileID: 7408528807096650745}
   - {fileID: 6548837521653813288}
-  - {fileID: 7527054245593185485}
+  - {fileID: 3034481622785904167}
+  - {fileID: 716314606}
   m_Father: {fileID: 6639182389187274551}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 66.014, y: -193.442, z: -51.479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8230815568371199313
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -261,7 +293,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7527054245593185485}
+  - component: {fileID: 3034481622785904167}
+  - component: {fileID: 5182195583677299908}
   m_Layer: 0
   m_Name: Gun Hole
   m_TagString: Untagged
@@ -269,7 +302,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7527054245593185485
+--- !u!4 &3034481622785904167
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,13 +310,21 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6288247240727951070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01215, y: -0, z: 0.00379}
+  m_LocalPosition: {x: -0.0227, y: 0, z: 0.00379}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6389459360990006143}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!222 &5182195583677299908
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6288247240727951070}
+  m_CullTransparentMesh: 1
 --- !u!1 &6289394763335493268
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,8 +462,8 @@ MonoBehaviour:
   isAcquired: 0
   hitEffect: {fileID: 7949275032527293572, guid: d76add5094f26a143970460e52d8d96d,
     type: 3}
-  gunHole: {fileID: 7527054245593185485}
-  gunHole2: {fileID: 0}
+  gunHole: {fileID: 0}
+  gunHole2: {fileID: 716314606}
   gunTransform: {fileID: 6639182389187274551}
 --- !u!135 &5654586288581612036
 SphereCollider:

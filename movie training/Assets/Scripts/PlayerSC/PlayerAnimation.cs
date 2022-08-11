@@ -13,31 +13,26 @@ public class PlayerAnimation : MonoBehaviour
 
     public void RunAnimation(Vector3 moveing)
     {
-        if (moveing != Vector3.zero)
-        {
-            animator.SetFloat("moveSpeed", moveing.magnitude);
-        }
-        else
-        {
-            animator.SetFloat("moveSpeed", 0f);
-        }
+
+       animator.SetFloat("moveSpeed", moveing.magnitude);
+
     }
 
     public void ShootingAnimation(bool isAiming)
     {
-        if (isAiming)
-        {
-            animator.SetBool("isAiming", true);
-        }
-        else
-        {
-            animator.SetBool("isAiming", false);
-        }
+
+        animator.SetBool("isAiming", isAiming);
     }
 
     public void SwingBatAnimation()
     {
         animator.SetTrigger("isSwing");
+
+    }
+
+    public void PushingAnimation(bool isPushing)
+    {
+        animator.SetBool("isPushing", isPushing);
 
     }
 }

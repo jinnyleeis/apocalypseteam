@@ -1131,13 +1131,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201902511807241116}
-  m_LocalRotation: {x: -0.5273139, y: 0.47110516, z: 0.5273139, w: 0.47110516}
-  m_LocalPosition: {x: -0.1031855, y: -0.036457464, z: 0}
+  m_LocalRotation: {x: 0.000000119209275, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.049999952, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5953623429420909278}
-  m_RootOrder: 1
+  m_Father: {fileID: 2786430892484749969}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1201902511807241122
 Camera:
@@ -1237,10 +1237,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeedX: 2.3
   rotateSpeedY: 3
-  limitMinX: -80
+  limitMinX: -45
   limitMaxX: 50
-  randomCameraShakeValue: 0.23
   player: {fileID: 1667662864419597767}
+  t: 0.88
 --- !u!1 &1349082744851221164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1761,7 @@ GameObject:
   - component: {fileID: 1201902511563885104}
   - component: {fileID: 1201902511563885105}
   - component: {fileID: 4852364693158908171}
+  - component: {fileID: 2111086832}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -1781,6 +1782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7317390603824373616}
+  - {fileID: 2786430892484749969}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1800,7 +1802,11 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'NC_R__sholder_JNT'\n\tTransform 'NC_L_sholder_JNT'\n\tTransform
+    'NC_R__sholder_JNT'\n\tTransform 'NC_L_sholder_JNT'\n\tFrom animation clip 'Shot
+    Idle'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1855,13 +1861,26 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.7
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2111086832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048973069139539837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15753e43f4c1f2a419d5083f70a90808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushPower: 3
 --- !u!1 &2083972245587451735
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,6 +5028,38 @@ Transform:
   m_Father: {fileID: 2290535179790923711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5355324379212340663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2786430892484749969}
+  m_Layer: 0
+  m_Name: HeadCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2786430892484749969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5355324379212340663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1201902511807241121}
+  m_Father: {fileID: 1667662864419597767}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5355390712525489677
 GameObject:
   m_ObjectHideFlags: 0
@@ -5133,7 +5184,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2466982561190714185}
-  - {fileID: 1201902511807241121}
   m_Father: {fileID: 1803592965299622726}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

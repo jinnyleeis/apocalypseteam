@@ -7,10 +7,6 @@ TagManager:
   - GUN
   - BAT
   - BUG
-  - WALL2
-  - WALL1
-  - WALL3
-  - WALL4
   layers:
   - Default
   - TransparentFX

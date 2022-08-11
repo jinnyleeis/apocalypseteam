@@ -4,26 +4,24 @@ using UnityEngine;
 
 public class BugMoveMent : MonoBehaviour
 {
+    public enum Type { 땅, 오른쪽벽, 왼쪽벽 };
+    public Type type; 
     Vector3 rotateDir;
 
     [SerializeField] float moveSpeed = 0.03f;
     Rigidbody rigidbody;
-
-    public bool canClimbUpWall;
-    public bool isWalking;
-    bool isClimbUpWall;
-
+    [SerializeField] float t;
     private void Awake()
     {
-        canClimbUpWall = true;
         rigidbody = GetComponent<Rigidbody>();
         ReSet();
     }
 
     private void Update()
     {
-        Move();
+        
         Rotation();
+        Move();
     }
     void Move()
     {
@@ -32,17 +30,26 @@ public class BugMoveMent : MonoBehaviour
 
     void Rotation()
     {
-        if (!isClimbUpWall)
-        {
-            Vector3 rotation = Vector3.Lerp(transform.eulerAngles, rotateDir, 0.01f);
-            rigidbody.MoveRotation(Quaternion.Euler(rotation));
-        }
-
+        //Vector3 rotation = Vector3.Lerp(transform.eulerAngles, rotateDir, 0.01f);
+        //rigidbody.MoveRotation(Quaternion.Euler(rotateDir));
+        rigidbody.MoveRotation(Quaternion.Slerp(Quaternion.Euler(transform.eulerAngles), Quaternion.Euler(rotateDir), t));
     }
 
     private void ReSet() 
     {
-        rotateDir.Set(0f, Random.Range(-360f, 360f), 0f);
+        if (type.ToString() == "땅")
+        {
+            rotateDir.Set(0f, Random.Range(0, 360f), 0f);
+        }
+        else if(type.ToString() == "오른쪽벽")
+        {
+            rotateDir.Set(Random.Range(0, 360f), 180f, -90f);
+        }
+        else
+        {
+            rotateDir.Set(Random.Range(0, 360f), 0f, -90f);
+        }
+        
 
         StartCoroutine(Wait());
     }
@@ -53,49 +60,4 @@ public class BugMoveMent : MonoBehaviour
         ReSet();
     }
 
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (canClimbUpWall)
-        {
-
-            isClimbUpWall = true;
-            rigidbody.useGravity = false;
-            if (collision.collider.CompareTag("WALL1"))
-            {
-                rigidbody.rotation = Quaternion.Euler(-90f, -90f, 0);
-            }
-            if (collision.collider.CompareTag("WALL2"))
-            {
-                rigidbody.rotation = Quaternion.Euler(-90f, 90f, 0);
-            }
-            if (collision.collider.CompareTag("WALL3"))
-            {
-                rigidbody.rotation = Quaternion.Euler(-90f, 0, 0);
-            }
-            if (collision.collider.CompareTag("WALL4"))
-            {
-                rigidbody.rotation = Quaternion.Euler(-90f, 180f, 0);
-            }
-            //   if (collision.collider.CompareTag("Box106"))
-            //{
-            //    rigidbody.rotation = Quaternion.Euler(-90f, 180f, 0);
-            //}
-            canClimbUpWall = false;
-            StartCoroutine(UseGravity());
-        }
-       
-    }
-
-
-    IEnumerator UseGravity()
-    {
-        yield return new WaitForSeconds(2f);
-        rigidbody.useGravity = true;
-        yield return new WaitForSeconds(0.5f);
-        isClimbUpWall = false;
-        rigidbody.rotation = Quaternion.Euler(0, 0, 0);
-        yield return new WaitForSeconds(10f);
-        canClimbUpWall = true;
-    }
 }

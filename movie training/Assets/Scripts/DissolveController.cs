@@ -12,6 +12,7 @@ public class DissolveController : MonoBehaviour
     Renderer[] childGO;
     private void Awake()
     {
+
         childGO = GetComponentsInChildren<Renderer>();
         length = GetComponentsInChildren<Transform>().Length;
         //for (int i=0; i< length -1; i++)
@@ -22,6 +23,9 @@ public class DissolveController : MonoBehaviour
 
     public void Update()
     {
+        if(Input.GetKeyDown(KeyCode.A))
+        {execute=true;}
+
         if (execute)
         {
             if (value <= 1f)

@@ -323,7 +323,7 @@ MonoBehaviour:
   hueVsSat:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 4
+      <length>k__BackingField: 5
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
@@ -331,7 +331,7 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
+          time: 0.009009009
           value: 1
           inSlope: 0
           outSlope: 0
@@ -340,16 +340,16 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.052884616
+          time: 0.054054055
           value: 0
-          inSlope: -4.3864756
-          outSlope: -4.3864756
+          inSlope: -6.3976517
+          outSlope: -6.3976517
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.34134614
+          time: 0.21621622
           value: 0
           inSlope: 0
           outSlope: 0
@@ -358,8 +358,17 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.9230769
+          time: 0.8963964
           value: 0
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.981982
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0

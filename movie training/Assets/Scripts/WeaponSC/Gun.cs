@@ -28,6 +28,7 @@ public class Gun : Weapon
                 raycastHit.transform.GetComponent<DissolveController>().execute = true;
                 GameObject effect = Instantiate(hitEffect, raycastHit.transform.position, Quaternion.identity);
                 Destroy(effect, 1f);
+                Debug.Log("맞았");
             }
         }
         playerAnimator.SetTrigger("isShot");

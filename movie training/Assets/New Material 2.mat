@@ -129,7 +129,7 @@ Material:
     - Vector1_F239C97B: 1
     - Vector1_F77105A4: 19.7
     - _BumpScale: 1
-    - _DissolveAmount: 0
+    - _DissolveAmount: 0.139
     - _Metallic: 1
     - _OcclusionStrength: 0
     - _QueueControl: 0
@@ -141,6 +141,6 @@ Material:
     - Color_6FC9EB15: {r: 1, g: 1, b: 1, a: 1}
     - Vector2_E8FC20A6: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_EEB1E890: {r: 1, g: 1, b: 0, a: 0}
-    - _BaseColor: {r: 0.3490566, g: 0.33753115, b: 0.33753115, a: 1}
+    - _BaseColor: {r: 0.6981132, g: 0.6553044, b: 0.6553044, a: 1}
     - _EmissionColor: {r: 10.680627, g: 10.680627, b: 10.680627, a: 1}
   m_BuildTextureStacks: []

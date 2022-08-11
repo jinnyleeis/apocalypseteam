@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: dissolvereding
   m_Shader: {fileID: -6465566751694194690, guid: 6ee90dfd4ddb15d4b8aab5a72950545e,
     type: 3}
   m_ValidKeywords: []
@@ -129,7 +129,7 @@ Material:
     - Vector1_F239C97B: 1
     - Vector1_F77105A4: 19.7
     - _BumpScale: 1
-    - _DissolveAmount: 0.139
+    - _DissolveAmount: 0
     - _Metallic: 1
     - _OcclusionStrength: 0
     - _QueueControl: 0
@@ -137,7 +137,7 @@ Material:
     - _Smoothness: 0.176
     m_Colors:
     - Color_43E99214: {r: 1, g: 1, b: 1, a: 1}
-    - Color_531C4914: {r: 1, g: 0.4481132, b: 0.4481132, a: 1}
+    - Color_531C4914: {r: 1, g: 1, b: 1, a: 1}
     - Color_6FC9EB15: {r: 1, g: 1, b: 1, a: 1}
     - Vector2_E8FC20A6: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_EEB1E890: {r: 1, g: 1, b: 0, a: 0}

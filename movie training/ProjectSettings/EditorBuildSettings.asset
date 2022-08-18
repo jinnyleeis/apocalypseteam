@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/redscene.unity
+    guid: 3ed2f0201536ec348868b1052de8a5c7
+  - enabled: 1
+    path: Assets/greenscene.unity
+    guid: 0b8de409ccdd244ab9e6a50d4e86ae3f
   m_configObjects: {}

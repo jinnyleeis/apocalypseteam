@@ -10,6 +10,8 @@ public class DissolveController : MonoBehaviour
     public bool execute;
     float length;
     Renderer[] childGO;
+    public GameObject nexteffect;
+    public bool timeline2played=false;
     private void Awake()
     {
 
@@ -37,6 +39,14 @@ public class DissolveController : MonoBehaviour
                     childGO[i].material.SetFloat("_Alpha", value);
                 }
             }
+
+             if (timeline2played==false){
+
+            nexteffect.GetComponent<TimelinePlayer2>().StartTimeline();
+            timeline2played=true;}
+
+
+
         }
     }
 }

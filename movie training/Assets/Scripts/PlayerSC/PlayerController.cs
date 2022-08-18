@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("무기장착");
                 other.GetComponent<Weapon>().SetWeaponPosition();
                 other.GetComponent<Weapon>().isAcquired = true;
                 other.GetComponent<Weapon>().canAttack = true;

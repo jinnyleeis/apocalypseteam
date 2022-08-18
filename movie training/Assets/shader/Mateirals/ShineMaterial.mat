@@ -48,12 +48,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FresnelPower: 1
-    - _OutLine_Thickness: 0
+    - _FresnelPower: 0.1
+    - _OutLine_Thickness: 1
     - _Power: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _InnerShineColor: {r: 0.4705882, g: 1.498039, b: 1.811765, a: 1}
-    - _OutShineColor: {r: 0, g: 1, b: 0.23921561, a: 0}
+    - _InnerShineColor: {r: 0, g: 1.4604368, b: 0.13032357, a: 0}
+    - _OutShineColor: {r: 0, g: 0.7830189, b: 0.18731034, a: 0}
   m_BuildTextureStacks: []

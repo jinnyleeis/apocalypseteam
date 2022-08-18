@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   postExposure:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 0.001
   contrast:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 46.2
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.754717, g: 0.7180799, b: 0.69419724, a: 1}
   hueShift:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 24
   saturation:
-    m_OverrideState: 0
-    m_Value: -0.6
+    m_OverrideState: 1
+    m_Value: 9.5
 --- !u!114 &-2470937738157092546
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43,25 +43,25 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.4
   intensity:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 0.33
   scatter:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   clamp:
     m_OverrideState: 0
     m_Value: 65472
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0, b: 0, a: 1}
+    m_Value: {r: 0.0931371, g: 0.20754719, b: 0, a: 1}
   highQualityFiltering:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   skipIterations:
-    m_OverrideState: 0
-    m_Value: 14
+    m_OverrideState: 1
+    m_Value: 4
   dirtTexture:
     m_OverrideState: 0
     m_Value: {fileID: 2800000, guid: 38cd74d3890464f45bc38834734688bb, type: 3}
@@ -117,13 +117,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
   m_Name: WhiteBalance
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   temperature:
-    m_OverrideState: 0
-    m_Value: -100
+    m_OverrideState: 1
+    m_Value: 90.5
   tint:
-    m_OverrideState: 0
-    m_Value: -100
+    m_OverrideState: 1
+    m_Value: -34
 --- !u!114 &1953632040166058159
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   master:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value:
       <length>k__BackingField: 4
       m_Loop: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   red:
     m_OverrideState: 0
     m_Value:
-      <length>k__BackingField: 2
+      <length>k__BackingField: 3
       m_Loop: 0
       m_ZeroValue: 0
       m_Range: 1
@@ -227,6 +227,15 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.47606727
+          value: 0.95628417
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -323,7 +332,7 @@ MonoBehaviour:
   hueVsSat:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 5
+      <length>k__BackingField: 6
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
@@ -331,7 +340,25 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.009009009
+          time: 0.03655914
+          value: 0
+          inSlope: -1.0829567
+          outSlope: -1.0829567
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.09750297
+          value: 0.007499993
+          inSlope: 0.8052578
+          outSlope: 0.8052578
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.3686088
           value: 1
           inSlope: 0
           outSlope: 0
@@ -340,35 +367,26 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.054054055
+          time: 0.44946492
           value: 0
-          inSlope: -6.3976517
-          outSlope: -6.3976517
+          inSlope: -0.99368185
+          outSlope: -0.99368185
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.21621622
+          time: 0.9676419
           value: 0
-          inSlope: 0
-          outSlope: 0
+          inSlope: 1.8851404
+          outSlope: 1.8851404
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.8963964
+          time: 1
           value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 0.981982
-          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -418,22 +436,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   redOutRedIn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 197
   redOutGreenIn:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 200
   redOutBlueIn:
     m_OverrideState: 0
     m_Value: 0
   greenOutRedIn:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   greenOutGreenIn:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 100
   greenOutBlueIn:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   blueOutRedIn:
     m_OverrideState: 0
@@ -459,13 +477,13 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 2
   intensity:
     m_OverrideState: 1
     m_Value: 1
   response:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}

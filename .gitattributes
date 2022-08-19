@@ -8,3 +8,4 @@ R_GREEN.fbx filter=lfs diff=lfs merge=lfs -text
 GREEN.fbx filter=lfs diff=lfs merge=lfs -text
 GREEN.tdc filter=lfs diff=lfs merge=lfs -text
 *fbx filter=lfs diff=lfs merge=lfs -text
+*.fbm filter=lfs diff=lfs merge=lfs -text

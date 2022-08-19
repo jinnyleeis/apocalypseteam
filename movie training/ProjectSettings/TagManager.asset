@@ -7,6 +7,7 @@ TagManager:
   - GUN
   - BAT
   - BUG
+  - HOLE
   layers:
   - Default
   - TransparentFX

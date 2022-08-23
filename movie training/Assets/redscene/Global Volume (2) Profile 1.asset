@@ -15,10 +15,10 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: 90.5
+    m_Value: 77.8
   tint:
     m_OverrideState: 1
-    m_Value: -30.2
+    m_Value: -19.8
 --- !u!114 &-5174698197681965557
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -216,8 +216,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.030075189
-          value: 0.9842342
+          time: 0.028268551
+          value: 0.9851485
           inSlope: -37.398808
           outSlope: -37.398808
           tangentMode: 0

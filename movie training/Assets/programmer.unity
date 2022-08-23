@@ -3237,7 +3237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1261964023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39839,11 +39839,9 @@ Animator:
   m_StabilizeFeet: 0
   m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
     are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'NC_R__sholder_JNT'\n\tTransform 'NC_R__sholder_JNT'\n\tTransform
-    'NC_L_sholder_JNT'\n\tTransform 'NC_R__Ankle_JNT'\n\tTransform 'NC_Head_JNT'\n\tTransform
-    'NC_Root_JNT'\n\tTransform 'NC_R__Thumb01_JNT'\n\tTransform 'NC_L_Middle02_JNT'\n\tTransform
-    'NC_R__Leg_JNT'\n\tTransform 'NC_L_Thumb02_JNT'\n\tand more ...\n\tFrom animation
-    clip 'Shot Idle'"
+    by Humanoid clips.\n\tTransform 'NC_R__sholder_JNT'\n\tTransform 'NC_L_sholder_JNT'\n\tTransform
+    'NC_R__sholder_JNT'\n\tTransform 'NC_L_sholder_JNT'\n\tFrom animation clip 'Shot
+    Idle'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0

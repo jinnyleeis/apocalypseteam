@@ -39,40 +39,43 @@ public class Gun : Weapon
         if (isAcquired)
         {
             //if (Input.GetMouseButtonDown(1))
-            if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0))
-            {
+           // if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0))
+           // {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isAiming = true;
                 //playerAnimator.SetBool("isShotIdleState", true);
-               // transform.GetChild(0).transform.localPosition = new Vector3(0.1439f, -0.0224f, -0.1518f); //이 부분 수정해야 할 것 같은데
-               // transform.GetChild(0).transform.localRotation = Quaternion.Euler(17.691f, -171.485f, -6.9f);
+               transform.GetChild(0).transform.localPosition = new Vector3(0.1439f, -0.0224f, -0.1518f); //이 부분 수정해야 할 것 같은데
+                transform.GetChild(0).transform.localRotation = Quaternion.Euler(17.691f, -171.485f, -6.9f);
                 canAttack = true;
-            }
-            else if (Input.GetMouseButtonUp(1) & Input.GetMouseButtonUp(0))
-            {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isAiming = false;
+           // }
+           // else if (Input.GetMouseButtonUp(1) & Input.GetMouseButtonUp(0))
+          // {
+           //     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isAiming = false;
                 //playerAnimator.SetBool("isShotIdleState", false); 
                 //transform.GetChild(0).transform.localRotation = Quaternion.Euler(66.014f, -193.442f, -51.479f);
-                canAttack = false;
-            }
+             //   canAttack = false;
+          //  }
 
             if (canAttack)
             {
 
                 if (Input.GetMouseButton(0) || Input.GetMouseButton(1) ) //발사
                 {
-                    canAttack = false;
+                    //canAttack = false;
                     Shot();
                     //총소리도 나면 좋을듯?
 
-                    StartCoroutine(WeaponCoolTime());
+                   // StartCoroutine(WeaponCoolTime());
                 }
+
             }
+            }
+    
         }
         
     }
-    IEnumerator WeaponCoolTime()
-    {
-        yield return new WaitForSeconds(0.3f);
-        canAttack = true;
-    }
-}
+   // IEnumerator WeaponCoolTime()
+   // {
+   //     yield return new WaitForSeconds(0.3f);
+   //     canAttack = true;
+   // }
+//}

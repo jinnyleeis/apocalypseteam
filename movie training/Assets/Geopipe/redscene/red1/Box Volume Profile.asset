@@ -197,16 +197,16 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.53485066
+          time: 0.52716297
           value: 1
-          inSlope: 5.390445
-          outSlope: 5.390445
+          inSlope: -0.15570226
+          outSlope: -0.15570226
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.6546455
+          time: 0.6277666
           value: 1
           inSlope: -2.6632407
           outSlope: -2.6632407
@@ -276,7 +276,7 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: 23
+    m_Value: 47
   tint:
     m_OverrideState: 1
     m_Value: -30.2
@@ -341,10 +341,10 @@ MonoBehaviour:
     m_Value: 0.001
   contrast:
     m_OverrideState: 1
-    m_Value: 46.2
+    m_Value: 100
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.754717, g: 0.7180799, b: 0.69419724, a: 1}
+    m_Value: {r: 0.44499823, g: 0.51787317, b: 0.754717, a: 1}
   hueShift:
     m_OverrideState: 1
     m_Value: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
     m_Value: 65472
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.40196466, b: 1, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   highQualityFiltering:
     m_OverrideState: 1
     m_Value: 1

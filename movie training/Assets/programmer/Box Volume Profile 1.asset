@@ -194,7 +194,7 @@ MonoBehaviour:
   hueVsSat:
     m_OverrideState: 1
     m_Value:
-      <length>k__BackingField: 8
+      <length>k__BackingField: 9
       m_Loop: 1
       m_ZeroValue: 0.5
       m_Range: 1
@@ -202,8 +202,8 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0.115238816
-          value: 0.31034482
+          time: 0.10865191
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.22592874
-          value: 0.968652
+          time: 0.24949698
+          value: 0
           inSlope: -2.4594688
           outSlope: -2.4594688
           tangentMode: 0
@@ -229,8 +229,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.37313432
-          value: 1
+          time: 0.39034206
+          value: 0
           inSlope: -0.06998793
           outSlope: -0.06998793
           tangentMode: 0
@@ -247,8 +247,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.5367703
-          value: 0.97178686
+          time: 0.5150905
+          value: 1
           inSlope: 0.5135784
           outSlope: 0.5135784
           tangentMode: 0
@@ -256,8 +256,17 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.6307809
-          value: 0.2758621
+          time: 0.6358149
+          value: 1
+          inSlope: -10.77642
+          outSlope: -10.77642
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 0.64788735
+          value: 0
           inSlope: -2.65861
           outSlope: -2.65861
           tangentMode: 0
@@ -265,8 +274,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.97801363
-          value: 0.23824453
+          time: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0

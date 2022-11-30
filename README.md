@@ -5,7 +5,6 @@ https://winter-scapula-675.notion.site/415f49c196fd48f6891aa91f261168b3
 
 ## hlsl 쉐이더 언어 스터디 후, 쉐이더 언어 작성을 통한 '쉐이더 적용(그래픽)'을 중점으로 타임라인 영화를 제작해본 프로젝트
 
-![7-2](https://user-images.githubusercontent.com/101055312/204692052-343b5321-e30c-4851-891a-2d278140aa5a.png)
 ![7](https://user-images.githubusercontent.com/101055312/204691974-db5ea666-964e-472d-a53d-ce0d9a82feea.png)
 ![8](https://user-images.githubusercontent.com/101055312/204691976-682bc6c0-b1dc-4236-8a4c-7c19d5f354b1.png)
 

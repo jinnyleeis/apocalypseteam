@@ -3,6 +3,8 @@
 # 데모 비디오
 https://winter-scapula-675.notion.site/415f49c196fd48f6891aa91f261168b3
 
+## hlsl 쉐이더 언어 스터디 후, 쉐이더 언어 작성을 통한 '쉐이더 적용'을 중점으로 타임라인 영화를 제작해본 프로젝트
+
 ![7-2](https://user-images.githubusercontent.com/101055312/204692052-343b5321-e30c-4851-891a-2d278140aa5a.png)
 ![7](https://user-images.githubusercontent.com/101055312/204691974-db5ea666-964e-472d-a53d-ce0d9a82feea.png)
 ![8](https://user-images.githubusercontent.com/101055312/204691976-682bc6c0-b1dc-4236-8a4c-7c19d5f354b1.png)
@@ -25,7 +27,7 @@ https://winter-scapula-675.notion.site/415f49c196fd48f6891aa91f261168b3
 ## -3) blue scene (b)
 <img width="1253" alt="image" src="https://user-images.githubusercontent.com/101055312/204691271-54e3fa96-d702-4e09-9bfc-df071fd4fe42.png">
 
-# 3. 버그를 해결 후 색을 되찾게 된다.
+# 3. 버그를 해결 후 가상 세계는 색을 되찾게 된다.
 <img width="1261" alt="image" src="https://user-images.githubusercontent.com/101055312/204691341-d2ad04ea-b930-48a8-a53a-d21b0bc34288.png">
 
 

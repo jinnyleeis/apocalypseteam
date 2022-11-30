@@ -3,9 +3,11 @@
 # 데모 비디오
 https://winter-scapula-675.notion.site/415f49c196fd48f6891aa91f261168b3
 
-![7.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59669c61-2209-4156-8125-2a3be8abc961/7.png)
-![7.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bfaa8353-06f2-4586-bb3c-56863c2d3f3e/7.png)
-![8.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6a499e66-4e07-4178-a648-95b6000b9507/8.png)
+![7-2](https://user-images.githubusercontent.com/101055312/204692052-343b5321-e30c-4851-891a-2d278140aa5a.png)
+![7](https://user-images.githubusercontent.com/101055312/204691974-db5ea666-964e-472d-a53d-ce0d9a82feea.png)
+![8](https://user-images.githubusercontent.com/101055312/204691976-682bc6c0-b1dc-4236-8a4c-7c19d5f354b1.png)
+
+
 
 1. programmer's room scene 
 프로그래머가 잠에 빠진 동안, 코드에러로 인해 가상세계의 색을 잃게 된다. 
